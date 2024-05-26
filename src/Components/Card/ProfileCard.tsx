@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.profileImg}>
-        <Image src={me} alt="me" />
+        <Image src={me} alt="me" priority />
       </div>
       <div className={styles.profileName}>
         <h3>Prashant Erappa Yelurkar</h3>

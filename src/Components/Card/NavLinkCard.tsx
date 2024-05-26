@@ -11,7 +11,7 @@ export default function NavLinkcard(props: {
   return (
     <div>
       <Link href={props.link} className={styles.nav}>
-        <Image src={props.icon} alt="home" />
+        <Image src={props.icon} alt="home" priority />
         <span>{props.name}</span>
       </Link>
     </div>

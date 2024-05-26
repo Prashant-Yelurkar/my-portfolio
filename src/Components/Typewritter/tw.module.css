@@ -1,0 +1,22 @@
+.track {
+  font-size: 35px;
+  font-weight: 400;
+}
+.track span {
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+.track .blink {
+  animation: blink 0.8s infinite ease-in-out;
+  -webkit-animation: blink 0.8s infinite ease-in-out;
+}
+
+/* Defining the "blink" animation */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

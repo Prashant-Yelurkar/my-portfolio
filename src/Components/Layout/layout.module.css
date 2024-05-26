@@ -1,14 +1,14 @@
 .layout {
   display: flex;
   width: 100vw;
-  height: 200vh;
-  /* flex-direction: row-reverse; */
+  height: 100vh;
 }
 .sideBar {
-  width: 300px;
+  min-width: 300px;
 }
 .main {
   display: flex;
   float: right;
-  width: calc(100% -300px);
+  width: 100vw;
+  /* padding: 0px 10px; */
 }

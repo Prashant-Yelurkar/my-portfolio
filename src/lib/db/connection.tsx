@@ -10,10 +10,7 @@ const connectionLink =
 
 export const connectToDatabase = async () => {
   if (mongoose.connection.readyState === 0) {
-    await mongoose.connect(connectionLink, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(connectionLink);
     console.log("Connected to MongoDB");
   }
 };

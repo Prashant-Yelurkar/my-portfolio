@@ -1,0 +1,35 @@
+.heading {
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  color: #173b6c;
+}
+.unferline {
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+  position: relative;
+}
+.unferline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+  animation: increaseWidth 1s ease-in-out 5s;
+  -webkit-animation: increaseWidth 1s ease-in-out 5s;
+}
+
+@keyframes increaseWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50px;
+  }
+}

@@ -1,0 +1,13 @@
+.bullet {
+  display: flex;
+  align-items: center;
+}
+.bullet img {
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+}
+.bullet .key {
+  font-weight: bolder;
+  margin-right: 20px;
+}

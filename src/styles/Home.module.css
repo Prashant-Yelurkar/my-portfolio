@@ -2,21 +2,30 @@
   width: 100%;
   height: 100%;
 }
-.section {
-  height: 100vh;
-  width: 100%;
-}
+
 .home {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 30px;
+  background-image: url("../Assets//images/bg3.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .home h2 {
   font-size: 50px;
   font-weight: 900;
   margin-bottom: 30px;
+}
+
+.about {
+  background-color: white;
+  padding: 50px;
+  /* height: 100%; */
 }

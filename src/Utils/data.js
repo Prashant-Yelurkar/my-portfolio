@@ -71,3 +71,41 @@ export const navData = [
     icon: HomeIcon,
   },
 ];
+
+export const myDetails = [
+  {
+    point: "Birthday",
+    value: "18 october 2004",
+  },
+  {
+    point: "Age",
+    value: "20",
+  },
+  {
+    point: "Website",
+    value: "www.mywebsite.com",
+    link: true,
+  },
+  {
+    point: "Degree",
+    value: "B.Tech",
+  },
+  {
+    point: "Phone",
+    value: "+91 9820010254",
+    link: true,
+  },
+  {
+    point: "Email",
+    value: "prashantyelurkar2004@gmail.com",
+    link: true,
+  },
+  {
+    point: "City",
+    value: "Mumbai , India",
+  },
+  {
+    point: "Freelance",
+    value: "Available",
+  },
+];

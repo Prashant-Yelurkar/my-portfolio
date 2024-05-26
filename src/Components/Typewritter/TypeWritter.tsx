@@ -43,7 +43,6 @@ export default function TypeWritter(props: { designation: any }) {
           setBackSpacing(true);
           setPause(false);
         }, 2000);
-        console.log("backspacing");
       }
     }
   }, [displayedWord, typing, backSpacing]);

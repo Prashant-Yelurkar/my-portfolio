@@ -74,38 +74,38 @@ export const navData = [
 
 export const myDetails = [
   {
-    point: "Birthday",
+    title: "Birthday",
     value: "18 october 2004",
   },
   {
-    point: "Age",
+    title: "Age",
     value: "20",
   },
   {
-    point: "Website",
+    title: "Website",
     value: "www.mywebsite.com",
     link: "https://my-portfolio-two-psi-24.vercel.app/",
   },
   {
-    point: "Degree",
+    title: "Degree",
     value: "B.Tech",
   },
   {
-    point: "Phone",
+    title: "Phone",
     value: "+91 9820010254",
     link: "+91 9820010254",
   },
   {
-    point: "Email",
+    title: "Email",
     value: "prashantyelurkar2004@gmail.com",
     link: "prashantyelurkar2004@gmail.com",
   },
   {
-    point: "City",
+    title: "City",
     value: "Mumbai , India",
   },
   {
-    point: "Freelance",
+    title: "Freelance",
     value: "Available",
   },
 ];

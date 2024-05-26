@@ -3,32 +3,29 @@ import styles from "./bc.module.css";
 import arrowIcon from "@/Assets/icons/arrowIcon.svg";
 import Link from "next/link";
 
-interface BulletCardProps {
-  point: string;
-  value: string | number;
-  link: boolean;
-}
-
-const BulletCard: React.FC<BulletCardProps> = ({ point, value, link }) => {
+export default function BulletCard(props: {
+  title: string;
+  link?: string;
+  value: string;
+}) {
   const linksUrl: { [key: string]: string } = {
     Email: "mailto:",
     Phone: "tel:",
     Website: "",
   };
 
-  const linkPrefix = linksUrl[point] !== undefined ? linksUrl[point] : "";
+  const linkPrefix =
+    linksUrl[props.title] !== undefined ? linksUrl[props.title] : "";
 
   return (
     <div className={styles.bullet}>
       <Image src={arrowIcon} alt="bullet" />
-      <span className={styles.key}>{point}:</span>
-      {!link ? (
-        <span>{value}</span>
+      <span className={styles.key}>{props.title}:</span>
+      {props.link ? (
+        <Link href={linkPrefix + props.link}>{props.value}</Link>
       ) : (
-        <Link href={linkPrefix + link}>{value}</Link>
+        <span>{props.value}</span>
       )}
     </div>
   );
-};
-
-export default BulletCard;
+}

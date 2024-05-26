@@ -46,7 +46,7 @@ export default function Index() {
                       <Image src={me} alt={"me"} />
                     </div>
                     <div>
-                      <Grid col={"1fr"} row={"0.8fr 1.2fr 2fr 1fr"} gap={10}>
+                      <Grid col={"1fr"} row={"0.6fr 1fr 2.5fr 1fr"} gap={10}>
                         <>
                           <SeactionHeading
                             heading={"Full Stack Developer & Data Anylist "}
@@ -60,9 +60,11 @@ export default function Index() {
                           </p>
                           <div>
                             <Grid col={"1fr 1fr"} row="repeat(4, 1fr)" gap={20}>
-                              {myDetails.map((value, index) => {
-                                return <BulletCard {...value} key={index} />;
-                              })}
+                              <>
+                                {myDetails.map((value, _index) => {
+                                  return <BulletCard {...value} />;
+                                })}
+                              </>
                             </Grid>
                           </div>
                           <p>

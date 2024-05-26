@@ -49,7 +49,7 @@ export default function TypeWritter(props: { designation: any }) {
   }, [displayedWord, typing, backSpacing]);
   return (
     <p className={styles.track}>
-      I'm <span>{displayedWord}</span>
+      I&apos; m <span>{displayedWord}</span>
       <span className={pause ? styles.blink : ""}> | </span>
     </p>
   );

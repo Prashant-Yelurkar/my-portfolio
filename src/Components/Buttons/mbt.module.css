@@ -1,0 +1,25 @@
+.mediaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: wheat;
+  cursor: pointer;
+  background-color: #212431;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  fill: white;
+  stroke: white;
+}
+.mediaButton img {
+  width: auto;
+  height: 15px;
+}
+.mediaButton:hover {
+  background-color: #149ddd;
+}

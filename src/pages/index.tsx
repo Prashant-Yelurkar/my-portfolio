@@ -1,10 +1,14 @@
-import Layout from "@/Components/Layout/page";
+// src/pages/index.js
 
-export default function Home() {
+import { useEffect, useState } from "react";
+import Layout from "@/Components/Layout/Layout";
+
+export default function Index() {
+  const [socialMediaData, setSocialMediaData] = useState(null);
+
   return (
     <Layout title="Main">
-      <h1>Hello</h1>
-      <p>dfsd</p>
+      <div>hdfsbdddshfs</div>
     </Layout>
   );
 }

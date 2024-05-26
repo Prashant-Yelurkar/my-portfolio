@@ -1,0 +1,25 @@
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6f7180;
+  cursor: pointer;
+}
+.nav img {
+  width: auto;
+  height: 25px;
+  stroke: red;
+}
+.nav span {
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.nav span:hover {
+  color: white;
+}

@@ -1,0 +1,19 @@
+.sideBar {
+  width: 300px;
+  background-color: black;
+  height: 100%;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
+}
+
+.navigation {
+  padding: 0px 0px 0px 30px;
+  margin: 30px 0px;
+  overflow-y: auto;
+  min-height: 100px;
+}

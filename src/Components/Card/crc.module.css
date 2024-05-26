@@ -1,0 +1,10 @@
+.copyRight {
+  width: 100%;
+  /* position: absolute; */
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+}
+.copyRight a {
+  color: #149ddd;
+}

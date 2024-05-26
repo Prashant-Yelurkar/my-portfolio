@@ -84,7 +84,7 @@ export const myDetails = [
   {
     point: "Website",
     value: "www.mywebsite.com",
-    link: true,
+    link: "https://my-portfolio-two-psi-24.vercel.app/",
   },
   {
     point: "Degree",
@@ -93,12 +93,12 @@ export const myDetails = [
   {
     point: "Phone",
     value: "+91 9820010254",
-    link: true,
+    link: "+91 9820010254",
   },
   {
     point: "Email",
     value: "prashantyelurkar2004@gmail.com",
-    link: true,
+    link: "prashantyelurkar2004@gmail.com",
   },
   {
     point: "City",

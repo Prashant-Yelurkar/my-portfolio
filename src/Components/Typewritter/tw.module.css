@@ -1,5 +1,5 @@
 .track {
-  font-size: 35px;
+  font-size: 23px;
   font-weight: 400;
 }
 .track span {
@@ -10,7 +10,11 @@
   animation: blink 0.8s infinite ease-in-out;
   -webkit-animation: blink 0.8s infinite ease-in-out;
 }
-
+@media only screen and (min-width: 600px) {
+  .track {
+    font-size: 35px;
+  }
+}
 /* Defining the "blink" animation */
 @keyframes blink {
   0% {

@@ -3,12 +3,18 @@
   background-color: black;
   height: 100%;
   color: white;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: -300px;
   bottom: 0;
   display: grid;
   grid-template-rows: 0.5fr 5fr 0.5fr;
+  z-index: 1;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
 }
 
 .navigation {
@@ -16,4 +22,15 @@
   margin: 30px 0px;
   overflow-y: auto;
   min-height: 100px;
+}
+.mobNav {
+  left: 0px;
+}
+
+@media only screen and (min-width: 600px) {
+  .sideBar {
+    position: fixed;
+    left: 0;
+    transition: 0s;
+  }
 }

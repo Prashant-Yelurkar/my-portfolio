@@ -62,7 +62,7 @@ export default function Index() {
                             <Grid col={"1fr 1fr"} row="repeat(4, 1fr)" gap={20}>
                               <>
                                 {myDetails.map((value, _index) => {
-                                  return <BulletCard {...value} />;
+                                  return <BulletCard {...value} key={_index} />;
                                 })}
                               </>
                             </Grid>

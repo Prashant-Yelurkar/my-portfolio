@@ -1,0 +1,31 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 20px;
+}
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: column;
+}
+
+.col {
+  flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+  .row {
+    flex-direction: row;
+  }
+  .container {
+    padding: 50px;
+  }
+}

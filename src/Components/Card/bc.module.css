@@ -1,6 +1,7 @@
 .bullet {
   display: flex;
   align-items: center;
+  padding-left: 15px;
 }
 .bullet img {
   width: 25px;
@@ -10,4 +11,14 @@
 .bullet .key {
   font-weight: bolder;
   margin-right: 20px;
+}
+.link {
+  text-overflow: ellipsis;
+  text-decoration: none;
+  overflow: hidden;
+}
+@media only screen and (min-width: 600px) {
+  .bullet {
+    padding-left: 0px;
+  }
 }

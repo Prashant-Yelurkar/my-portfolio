@@ -1,12 +1,13 @@
 .sideBar {
   width: 300px;
   background-color: black;
-  height: 100%;
+  /* max-height: 100vh; */
+  height: 100vh;
   color: white;
   position: absolute;
   top: 0;
   left: -300px;
-  bottom: 0;
+  bottom: 0px;
   display: grid;
   grid-template-rows: 0.5fr 5fr 0.5fr;
   z-index: 1;

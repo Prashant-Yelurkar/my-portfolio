@@ -10,7 +10,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, title }: LayoutProps) {
-  const [mobnav, setMobNav] = useState(false);
+  const [mobNav, setMobNav] = useState(false);
   return (
     <>
       <Head>
@@ -18,10 +18,10 @@ export default function Layout({ children, title }: LayoutProps) {
       </Head>
       <div className={styles.layout}>
         <div className={styles.sideBar}>
-          <SideBar mobView={mobnav} />
-          <MobileNav fn={() => setMobNav(!mobnav)} />
+          <SideBar mobView={mobNav} />
+          <MobileNav fn={() => setMobNav(!mobNav)} mobNav={mobNav} />
         </div>
-        <div className={styles.main}>{children}</div>
+        {children}
       </div>
     </>
   );

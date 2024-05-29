@@ -22,7 +22,9 @@ export default function BulletCard(props: {
       <Image src={arrowIcon} alt="bullet" />
       <span className={styles.key}>{props.title}:</span>
       {props.link ? (
-        <Link href={linkPrefix + props.link}>{props.value}</Link>
+        <Link href={linkPrefix + props.link} className={styles.link}>
+          {props.value}
+        </Link>
       ) : (
         <span>{props.value}</span>
       )}

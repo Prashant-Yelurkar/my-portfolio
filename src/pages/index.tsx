@@ -1,13 +1,10 @@
 import SeactionHeading from "@/Components/Heading/SeactionHeading";
 import Layout from "@/Components/Layout/Layout";
-import Section from "@/Components/Section/Section";
+import Section from "@/Components/Containers/Section";
 import TypeWritter from "@/Components/Typewritter/TypeWritter";
 import styles from "@/styles/Home.module.css";
-import me from "@/Assets/images/me.png";
-import Image from "next/image";
-import Grid from "@/Components/Section/Grid";
-import BulletCard from "@/Components/Card/BulletCard";
-import { myDetails } from "@/Utils/data";
+import Container from "@/Components/Containers/Container";
+import About from "@/Components/Sections/About";
 
 const designation = [
   "Data Scientist",
@@ -22,66 +19,21 @@ export default function Index() {
       <div className={styles.main}>
         <Section>
           <div className={styles.home}>
-            <h2>Prashant Yelurkar</h2>
-            <TypeWritter designation={designation} />
+            <Container>
+              <h2>Prashant Yelurkar</h2>
+              <TypeWritter designation={designation} />
+            </Container>
           </div>
         </Section>
+        <About />
         <Section>
-          <div className={styles.about}>
-            <Grid col={"1fr"} row={"0.5fr 1fr 6fr"} gap={25}>
-              <>
-                <SeactionHeading heading={"About"} underline={true} />
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequuntur maxime quos omnis in ipsa aliquid laborum? Alias
-                  expedita, tenetur temporibus iste deserunt praesentium quo
-                  sint ipsa officiis nihil sit, quam et impedit ratione magnam
-                  consequatur dignissimos? Quod laboriosam, delectus magnam
-                  eveniet, est dignissimos harum obcaecati ducimus aliquid id
-                  modi soluta!
-                </p>
-                <Grid col={"1fr 2fr"} row={"1fr"} gap={20}>
-                  <>
-                    <div>
-                      <Image src={me} alt={"me"} />
-                    </div>
-                    <div>
-                      <Grid col={"1fr"} row={"0.6fr 1fr 2.5fr 1fr"} gap={10}>
-                        <>
-                          <SeactionHeading
-                            heading={"Full Stack Developer & Data Anylist "}
-                            underline={false}
-                          />
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Similique totam perferendis quidem eaque,
-                            doloremque deleniti error molestiae harum. Alias
-                            sunt architecto sed! Commodi.
-                          </p>
-                          <div>
-                            <Grid col={"1fr 1fr"} row="repeat(4, 1fr)" gap={20}>
-                              <>
-                                {myDetails.map((value, _index) => {
-                                  return <BulletCard {...value} key={_index} />;
-                                })}
-                              </>
-                            </Grid>
-                          </div>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Maiores temporibus illo quo inventore soluta
-                            praesentium velit quidem saepe quas dolores ullam
-                            est magnam architecto sed fuga officia, in sequi
-                            dolorem!
-                          </p>
-                        </>
-                      </Grid>
-                    </div>
-                  </>
-                </Grid>
-              </>
-            </Grid>
-          </div>
+          <Container>
+            <SeactionHeading
+              heading={"Skills"}
+              underline={true}
+              desc=" Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
+            />
+          </Container>
         </Section>
       </div>
     </Layout>

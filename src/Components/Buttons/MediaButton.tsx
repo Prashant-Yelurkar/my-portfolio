@@ -3,15 +3,16 @@ import Link from "next/link";
 import styles from "./mbt.module.css";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { UrlObject } from "url";
-export default function MediaButton(props: {
+interface MediaProps {
   link: string | UrlObject;
-  icon: string | StaticImport;
+  icon: any;
   name: string;
-}) {
+}
+export default function MediaButton({ link, icon, name }: MediaProps) {
   return (
     <div>
-      <Link className={styles.mediaButton} href={props.link}>
-        <Image src={props.icon} alt={props.name} />
+      <Link className={styles.mediaButton} href={link}>
+        {icon}
       </Link>
     </div>
   );

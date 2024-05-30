@@ -1,74 +1,77 @@
-import twitterIcon from "@/Assets/icons/twitter.svg";
-import instagramIcon from "@/Assets/icons/instagram.svg";
-import facebookIcon from "@/Assets/icons/facebook.svg";
-import linkedinIcon from "@/Assets/icons/linkedin.svg";
-import githubIcon from "@/Assets/icons/github.svg";
+import {
+  Home,
+  Facebook,
+  GitHub,
+  Instagram,
+  Linkdin,
+  Twitter,
+  About,
+  Skill,
+} from "@/Assets/icons";
 
 export const mediaData = [
   {
     name: "twitter",
     link: "dfsf",
-    icon: twitterIcon,
+    icon: <Twitter />,
   },
   {
     name: "Instagram",
     link: "fb-link",
-    icon: instagramIcon,
+    icon: <Instagram />,
   },
   {
     name: "Facebook",
     link: "dfsf",
-    icon: facebookIcon,
+    icon: <Facebook />,
   },
   {
     name: "Linkdin",
     link: "fb-link",
-    icon: linkedinIcon,
+    icon: <Linkdin />,
   },
   {
     name: "Github",
     link: "fb-link",
-    icon: githubIcon,
+    icon: <GitHub />,
   },
 ];
-
-import HomeIcon from "@/Assets/icons/home.svg";
 
 export const navData = [
   {
     name: "Home",
-    link: "#",
-    icon: HomeIcon,
+    link: "home",
+    icon: <Home />,
   },
   {
     name: "About",
-    link: "#",
-    icon: HomeIcon,
+    link: "about",
+    icon: <About />,
+  },
+  {
+    name: "Skill",
+    link: "skill",
+    icon: <Skill />,
   },
   {
     name: "Education",
-    link: "#",
-    icon: HomeIcon,
+    link: "education",
+    icon: <Home />,
   },
   {
     name: "Expricence",
-    link: "#",
-    icon: HomeIcon,
-  },
-  {
-    name: "Resume",
-    link: "#",
-    icon: HomeIcon,
+    link: "exprience",
+    icon: <Home />,
   },
   {
     name: "Achivenments",
-    link: "#",
-    icon: HomeIcon,
+    link: "achivenments",
+    icon: <Home />,
   },
   {
     name: "Contact",
-    link: "#",
-    icon: HomeIcon,
+    link: "contact",
+    icon: <Home />,
   },
 ];
 

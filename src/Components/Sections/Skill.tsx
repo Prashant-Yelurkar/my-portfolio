@@ -3,35 +3,62 @@ import RangeCard from "../Card/RangeCard";
 import Container from "../Containers/Container";
 import Grid from "../Containers/Grid";
 import Section from "../Containers/Section";
-import SeactionHeading from "../Heading/SeactionHeading";
+import SectionHeading from "@/Components/Heading/SeactionHeading";
 import styles from "./skill.module.css";
+
 export default function Skills() {
+  function Spacer() {
+    return <div style={{ height: "20px" }} />;
+  }
+
+  function Heading(props: { title: string }) {
+    const { title } = props;
+    return (
+      <h3>
+        <strong>
+          <i>
+            <u>{title}</u>
+          </i>
+        </strong>
+      </h3>
+    );
+  }
+
   return (
     <Section>
       <Container>
-        <SeactionHeading
-          heading={"Skills"}
+        <SectionHeading
+          heading="Skills"
           underline={true}
-          desc=" Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
+          desc="Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
         />
-        <h1>Languages</h1>
+        <Spacer />
+
+        <Heading title="Languages" />
+        <Spacer />
 
         <Grid minmax={300} gap={30}>
-          {ProgrammingLanguages.map((value, index) => {
-            return <RangeCard {...value} key={index} />;
-          })}
+          {ProgrammingLanguages.map((value, index) => (
+            <RangeCard {...value} key={index} />
+          ))}
         </Grid>
-        <h1>FrameWorks</h1>
+        <Spacer />
+
+        <Heading title="FrameWorks" />
+        <Spacer />
         <Grid minmax={300} gap={30}>
-          {FrameWorks.map((value, index) => {
-            return <RangeCard {...value} key={index} />;
-          })}
+          {FrameWorks.map((value, index) => (
+            <RangeCard {...value} key={index} />
+          ))}
         </Grid>
-        <h1>Data Base</h1>
+        <Spacer />
+
+        <Heading title="Data Base" />
+        <Spacer />
         <Grid minmax={300} gap={30}>
-          {DataBases.map((value, index) => {
-            return <RangeCard {...value} key={index} />;
-          })}
+          {DataBases.map((value, index) => (
+            <RangeCard {...value} key={index} />
+          ))}
         </Grid>
       </Container>
     </Section>

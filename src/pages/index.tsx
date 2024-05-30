@@ -18,16 +18,21 @@ export default function Index() {
   return (
     <Layout title="Prashant Yelurkar">
       <div className={styles.main}>
-        <Section>
-          <div className={styles.home}>
+        <div className={styles.home} id={"home"}>
+          <Section>
             <Container>
               <h2>Prashant Yelurkar</h2>
               <TypeWritter designation={designation} />
             </Container>
-          </div>
-        </Section>
-        <About />
-        <Skills />
+          </Section>
+        </div>
+
+        <div id="about">
+          <About />
+        </div>
+        <div id="skill">
+          <Skills />
+        </div>
       </div>
     </Layout>
   );

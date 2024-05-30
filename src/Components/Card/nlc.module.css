@@ -6,11 +6,7 @@
   color: #6f7180;
   cursor: pointer;
 }
-.nav img {
-  width: auto;
-  height: 25px;
-  stroke: red;
-}
+
 .nav span {
   font-size: 16px;
   font-weight: 400;
@@ -22,4 +18,15 @@
 }
 .nav span:hover {
   color: white;
+}
+.nav svg {
+  width: auto;
+  height: 25px;
+  stroke: #6f7180;
+}
+.selected {
+  color: #149ddd;
+}
+.selected svg {
+  fill: #149ddd;
 }

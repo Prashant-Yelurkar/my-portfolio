@@ -18,8 +18,8 @@ export default function Layout({ children, title }: LayoutProps) {
       </Head>
       <div className={styles.layout}>
         <div className={styles.sideBar}>
-          <SideBar mobView={mobNav} />
-          <MobileNav fn={() => setMobNav(!mobNav)} mobNav={mobNav} />
+          <SideBar mobView={mobNav} fn={() => setMobNav(!mobNav)} />
+          <MobileNav fn={() => setMobNav(!mobNav)} mobView={mobNav} />
         </div>
         {children}
       </div>

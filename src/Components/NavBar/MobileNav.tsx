@@ -1,17 +1,17 @@
 import styles from "./mv.module.css";
-import Image from "next/image";
-import menuIcon from "@/Assets/icons/hamburger.svg";
-import { MouseEventHandler } from "react";
-import closeIcon from "@/Assets/icons/closeIcon.svg";
-export default function MobileNav(props: { fn: () => void; mobNav: any }) {
-  const handleClick = props.fn || (() => {});
+import { MenuClose, MenuOpen } from "@/Assets/icons";
 
+interface MobileNavProps {
+  fn: Function;
+  mobView: any;
+}
+export default function MobileNav({ fn, mobView }: MobileNavProps) {
   return (
     <div className={styles.mobnav}>
-      {props.mobNav ? (
-        <Image onClick={handleClick} src={closeIcon} alt="menuIcon" />
+      {mobView ? (
+        <MenuClose onClick={() => fn()} />
       ) : (
-        <Image onClick={handleClick} src={menuIcon} alt="menuIcon" />
+        <MenuOpen onClick={() => fn()} />
       )}
     </div>
   );

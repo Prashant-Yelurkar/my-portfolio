@@ -3,7 +3,7 @@
   align-items: center;
   padding-left: 15px;
 }
-.bullet img {
+.bullet svg {
   width: 25px;
   height: 25px;
   opacity: 0.5;

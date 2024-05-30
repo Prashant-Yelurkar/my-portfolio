@@ -27,6 +27,7 @@ export default function RangeCard(props: {
         value={amount}
         min={0}
         max={100}
+        onChange={() => {}}
       />
     </div>
   );

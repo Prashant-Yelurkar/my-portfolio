@@ -36,3 +36,7 @@
   gap: 8px;
   margin-top: 10px;
 }
+.socialMedia svg {
+  width: 20px;
+  height: 20px;
+}

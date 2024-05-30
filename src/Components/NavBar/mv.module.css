@@ -10,7 +10,7 @@
   padding: 10px;
   background-color: rgb(44, 47, 63, 0.2);
 }
-.mobnav img {
+.mobnav svg {
   width: 30px;
   height: auto;
   cursor: pointer;

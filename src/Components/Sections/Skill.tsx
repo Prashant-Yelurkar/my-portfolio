@@ -18,19 +18,19 @@ export default function Skills() {
 
         <Grid minmax={300} gap={30}>
           {ProgrammingLanguages.map((value, index) => {
-            return <RangeCard {...value} />;
+            return <RangeCard {...value} key={index} />;
           })}
         </Grid>
         <h1>FrameWorks</h1>
         <Grid minmax={300} gap={30}>
           {FrameWorks.map((value, index) => {
-            return <RangeCard {...value} />;
+            return <RangeCard {...value} key={index} />;
           })}
         </Grid>
         <h1>Data Base</h1>
         <Grid minmax={300} gap={30}>
           {DataBases.map((value, index) => {
-            return <RangeCard {...value} />;
+            return <RangeCard {...value} key={index} />;
           })}
         </Grid>
       </Container>

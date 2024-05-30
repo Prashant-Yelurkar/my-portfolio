@@ -1,0 +1,21 @@
+.range {
+  width: 100%;
+}
+.range .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-weight: bolder;
+}
+.range input {
+  -webkit-appearance: none;
+
+  width: 100%;
+  background: #dce8f8;
+  height: 10px;
+}
+
+.range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}

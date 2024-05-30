@@ -5,6 +5,7 @@ import TypeWritter from "@/Components/Typewritter/TypeWritter";
 import styles from "@/styles/Home.module.css";
 import Container from "@/Components/Containers/Container";
 import About from "@/Components/Sections/About";
+import Skills from "@/Components/Sections/Skill";
 
 const designation = [
   "Data Scientist",
@@ -26,15 +27,7 @@ export default function Index() {
           </div>
         </Section>
         <About />
-        <Section>
-          <Container>
-            <SeactionHeading
-              heading={"Skills"}
-              underline={true}
-              desc=" Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
-            />
-          </Container>
-        </Section>
+        <Skills />
       </div>
     </Layout>
   );

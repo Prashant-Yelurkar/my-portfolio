@@ -109,3 +109,70 @@ export const myDetails = [
     value: "Available",
   },
 ];
+
+export const ProgrammingLanguages = [
+  {
+    name: "C",
+    amount: 75,
+  },
+  {
+    name: "C++",
+    amount: 75,
+  },
+  {
+    name: "HTML",
+    amount: 100,
+  },
+  {
+    name: "CSS",
+    amount: 100,
+  },
+  {
+    name: "JS",
+    amount: 80,
+  },
+  {
+    name: "JQuery",
+    amount: 75,
+  },
+  {
+    name: "Python",
+    amount: 55,
+  },
+];
+export const FrameWorks = [
+  {
+    name: "Bootstrap",
+    amount: 100,
+  },
+  {
+    name: "CodeIgniter",
+    amount: 75,
+  },
+  {
+    name: "React JS",
+    amount: 100,
+  },
+  {
+    name: "Next JS",
+    amount: 100,
+  },
+  {
+    name: "Express JS",
+    amount: 80,
+  },
+  {
+    name: "Node JS",
+    amount: 75,
+  },
+];
+export const DataBases = [
+  {
+    name: "MySql",
+    amount: 100,
+  },
+  {
+    name: "MongoDB",
+    amount: 75,
+  },
+];

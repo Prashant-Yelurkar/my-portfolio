@@ -10,20 +10,19 @@ interface SideBarProps {
 }
 export default function SideBar({ fn, mobView }: SideBarProps) {
   const [scrollTo, setScrollTo] = useState("home");
+  const [selectedNav, setSelectedNav] = useState("home");
 
-  useEffect(() => {
-    fn();
-
-    const element = document.getElementById(scrollTo);
+  function handelScrollTo(link: string) {
+    setSelectedNav(link);
+    setScrollTo(link);
+    const element = document.getElementById(link);
     if (element) {
       element.scrollIntoView({
         block: "start",
       });
     }
-  }, [scrollTo]);
-  function handelScroll(link: string) {
-    setScrollTo(link);
   }
+
   return (
     <aside className={`${styles.sideBar} ${mobView ? styles.mobNav : ""}`}>
       <Profile />
@@ -32,11 +31,13 @@ export default function SideBar({ fn, mobView }: SideBarProps) {
         <div>
           {navData.map((value, index) => (
             <NavLinkCard
-              selected={scrollTo}
+              selected={selectedNav}
+              setSelected={(link: string) => setSelectedNav(link)}
               {...value}
               key={index}
               scrollTo={(link: string) => {
-                handelScroll(link);
+                handelScrollTo(link);
+                fn();
               }}
             />
           ))}

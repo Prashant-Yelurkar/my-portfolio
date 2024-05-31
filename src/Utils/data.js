@@ -53,26 +53,26 @@ export const navData = [
     link: "skill",
     icon: <Skill />,
   },
-  {
-    name: "Education",
-    link: "education",
-    icon: <Home />,
-  },
-  {
-    name: "Expricence",
-    link: "exprience",
-    icon: <Home />,
-  },
-  {
-    name: "Achivenments",
-    link: "achivenments",
-    icon: <Home />,
-  },
-  {
-    name: "Contact",
-    link: "contact",
-    icon: <Home />,
-  },
+  // {
+  //   name: "Education",
+  //   link: "education",
+  //   icon: <Home />,
+  // },
+  // {
+  //   name: "Expricence",
+  //   link: "exprience",
+  //   icon: <Home />,
+  // },
+  // {
+  //   name: "Achivenments",
+  //   link: "achivenments",
+  //   icon: <Home />,
+  // },
+  // {
+  //   name: "Contact",
+  //   link: "contact",
+  //   icon: <Home />,
+  // },
 ];
 
 export const myDetails = [

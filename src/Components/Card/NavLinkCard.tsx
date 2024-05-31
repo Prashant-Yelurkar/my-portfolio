@@ -1,20 +1,51 @@
-import Image from "next/image";
 import styles from "./nlc.module.css";
-import Link from "next/link";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { UrlObject } from "url";
+import { useEffect } from "react";
+import { navData } from "@/Utils/data";
+
 export default function NavLinkcard(props: {
-  link: string | UrlObject;
+  link: string;
   icon: any;
   name: string;
   scrollTo: Function;
   selected: string;
+  setSelected: Function;
 }) {
-  const { link, icon, name, scrollTo, selected } = props;
+  const { link, icon, name, scrollTo, selected, setSelected } = props;
+
+  function handelClick() {
+    scrollTo(link);
+  }
+  const checkIsInViewPort = (value: any) => {
+    const item = value.getBoundingClientRect();
+    console.log(name, +"    " + item.top);
+
+    return (
+      item.top < 500 // &&
+      //   item.left >= 0 &&
+      //   item.bottom <=
+      //     (window.innerHeight || document.documentElement.clientHeight) &&
+      //   item.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+  useEffect(() => {
+    const elementToCheck = document.getElementById(link);
+    const handleScroll = () => {
+      if (checkIsInViewPort(elementToCheck)) {
+        setSelected(link);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       className={`${styles.nav} ${selected == link ? styles.selected : ""}`}
-      onClick={() => scrollTo(link)}
+      onClick={handelClick}
     >
       {icon}
       <span>{name}</span>

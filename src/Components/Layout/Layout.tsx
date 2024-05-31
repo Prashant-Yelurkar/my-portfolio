@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { ReactNode, useState } from "react";
 import SideBar from "@/Components/SideBar/SideBar";
-import { styleText } from "util";
 import styles from "./layout.module.css";
 import MobileNav from "../NavBar/MobileNav";
 interface LayoutProps {
@@ -11,6 +10,7 @@ interface LayoutProps {
 
 export default function Layout({ children, title }: LayoutProps) {
   const [mobNav, setMobNav] = useState(false);
+
   return (
     <>
       <Head>

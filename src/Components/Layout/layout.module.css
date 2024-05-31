@@ -1,7 +1,6 @@
 .layout {
   display: flex;
   width: 100vw;
-  height: 100vh;
 }
 .sideBar {
   width: 0px;

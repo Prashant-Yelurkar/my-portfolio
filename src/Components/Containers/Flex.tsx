@@ -6,10 +6,9 @@ import {
   AwaitedReactNode,
 } from "react";
 import styles from "./st.module.css";
-export default function Flex(props: {
+interface FlexProps {
   gap?: number;
-  row?: any;
-  col?: any;
+  direction: string;
   children:
     | string
     | number
@@ -21,13 +20,14 @@ export default function Flex(props: {
     | Promise<AwaitedReactNode>
     | null
     | undefined;
-}) {
+}
+export default function Flex({ gap, direction, children }: FlexProps) {
   return (
     <div
-      className={`${props.row ? styles.row : styles.col}`}
-      style={{ display: "flex", gap: props.gap + "px" }}
+      className={`${direction == "row" ? styles.row : styles.col}`}
+      style={{ display: "flex", gap: gap + "px" }}
     >
-      {props.children}
+      {children}
     </div>
   );
 }

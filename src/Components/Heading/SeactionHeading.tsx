@@ -3,7 +3,7 @@ import styles from "./sh.module.css";
 export default function SeactionHeading(props: {
   heading: string;
   underline: boolean;
-  desc: string;
+  desc?: string;
 }) {
   return (
     <div>

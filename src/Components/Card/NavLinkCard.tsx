@@ -18,8 +18,6 @@ export default function NavLinkcard(props: {
   }
   const checkIsInViewPort = (value: any) => {
     const item = value.getBoundingClientRect();
-    console.log(name, +"    " + item.top);
-
     return (
       item.top < 500 // &&
       //   item.left >= 0 &&
@@ -32,7 +30,9 @@ export default function NavLinkcard(props: {
     const elementToCheck = document.getElementById(link);
     const handleScroll = () => {
       if (checkIsInViewPort(elementToCheck)) {
+        // if (scrollTo != selected) {
         setSelected(link);
+        // }
       }
     };
     window.addEventListener("scroll", handleScroll);

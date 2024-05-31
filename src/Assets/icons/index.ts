@@ -10,3 +10,4 @@ export { default as MenuClose } from "@/Assets/icons/closeIcon.svg";
 export { default as ArrowRight } from "@/Assets/icons/arrow-right.svg";
 export { default as About } from "@/Assets/icons/about.svg";
 export { default as Skill } from "@/Assets/icons/skill.svg";
+export { default as Resume } from "@/Assets/icons/resume.svg";

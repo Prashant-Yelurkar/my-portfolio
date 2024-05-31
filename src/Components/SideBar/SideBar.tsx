@@ -13,7 +13,6 @@ export default function SideBar({ fn, mobView }: SideBarProps) {
   const [selectedNav, setSelectedNav] = useState("home");
 
   function handelScrollTo(link: string) {
-    setSelectedNav(link);
     setScrollTo(link);
     const element = document.getElementById(link);
     if (element) {

@@ -13,7 +13,7 @@ export default function About() {
     <Section>
       <Container>
         <div className={styles.about}>
-          <Flex col={true} gap={25}>
+          <Flex direction={"col"} gap={25}>
             <SeactionHeading
               heading={"About"}
               underline={true}
@@ -25,12 +25,12 @@ export default function About() {
                   eveniet, est dignissimos harum obcaecati ducimus aliquid id
                   modi soluta!"
             />
-            <Flex row={true} gap={25}>
+            <Flex direction={"row"} gap={25}>
               <div className={styles.photo}>
                 <Image src={me} alt={"me"} />
               </div>
               <div>
-                <Flex col={true} gap={20}>
+                <Flex direction={"col"} gap={20}>
                   <SeactionHeading
                     heading={"Full Stack Developer & Data Anylist "}
                     underline={false}

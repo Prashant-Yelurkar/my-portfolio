@@ -9,8 +9,24 @@ import Flex from "../Containers/Flex";
 import Section from "../Containers/Section";
 import SeactionHeading from "../Heading/SeactionHeading";
 import styles from "./resume.module.css";
+import Link from "next/link";
+// import { useEffect, useState } from "react";
 
 export default function Resume() {
+  // const [data, setdata] = useState("");
+  // useEffect(() => {
+  //   async function getData() {
+  //     try {
+  //       const response = await fetch("/api/routs");
+  //       if (response.status == 200) {
+  //         setdata(response.json());
+  //       }
+  //     } catch (error) {
+  //       console.log("error");
+  //     }
+  //   }
+  //   getData();
+  // });
   return (
     <Section>
       <Container>
@@ -36,7 +52,7 @@ export default function Resume() {
               </div>
             </div>
             <div>
-              <h2>Expricence</h2>
+              <h2>Professional Experience</h2>
 
               <div className={styles.leftBorder}>
                 {ResumeData.exprience.map((item, index) => {
@@ -45,6 +61,9 @@ export default function Resume() {
               </div>
             </div>
           </Flex>
+          <Link href="../../Assets/files/resume.pdf" download>
+            Download
+          </Link>
         </Flex>
       </Container>
     </Section>

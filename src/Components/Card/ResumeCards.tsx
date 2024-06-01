@@ -54,6 +54,8 @@ interface ResumeEducationCardProps {
   link?: string;
   description: string;
   duration: string;
+  percentage?: number;
+  CGPA?: number;
 }
 export function ResumeEducationCard({
   degree,
@@ -62,12 +64,20 @@ export function ResumeEducationCard({
   link,
   description,
   duration,
+  CGPA,
+  percentage,
 }: ResumeEducationCardProps) {
   return (
     <div className={styles.resumeCard}>
       <Flex direction={"col"} gap={20}>
         <h4 className={styles.title}>{degree}</h4>
-        {duration && <p className={styles.duration}> {duration}</p>}
+        <Flex direction="row" gap={40}>
+          {duration && <p className={styles.duration}> {duration}</p>}
+          {CGPA && <p className={styles.duration}> CGPA :{CGPA}</p>}
+          {percentage && (
+            <p className={styles.duration}> Percentga :{percentage}</p>
+          )}
+        </Flex>
 
         <p>
           <em>
@@ -106,11 +116,17 @@ export function ResumeExpericenceCard({
         {duration && <p className={styles.duration}> {duration}</p>}
 
         <p>
-          <em>
-            <Link href={link || ""}>
+          {link ? (
+            <em>
+              <Link href={link} target="_blank">
+                {company} ,&nbsp; {address}
+              </Link>{" "}
+            </em>
+          ) : (
+            <em>
               {company} ,&nbsp; {address}
-            </Link>
-          </em>
+            </em>
+          )}
         </p>
 
         {description && <p>{description}</p>}

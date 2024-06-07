@@ -7,6 +7,7 @@ import Container from "@/Components/Containers/Container";
 import About from "@/Components/Sections/About";
 import Skills from "@/Components/Sections/Skill";
 import Resume from "@/Components/Sections/Resume";
+import { useEffect } from "react";
 
 const designation = [
   "Data Scientist",
@@ -16,6 +17,17 @@ const designation = [
   "Freelancer",
 ];
 export default function Index() {
+  useEffect(() => {
+    async function getData() {
+      const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}routes`).then(
+        (e) => {
+          return e.json();
+        }
+      );
+      console.log(data[0]);
+    }
+    getData();
+  });
   return (
     <Layout title="Prashant Yelurkar">
       <div className={styles.main}>

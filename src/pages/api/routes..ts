@@ -8,7 +8,6 @@ export default async function getSocialMedia(
 ) {
   try {
     const data = await GET();
-
     res.status(200).json(data.result);
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -18,10 +17,12 @@ export default async function getSocialMedia(
 
 // export { getSocialMedia };
 
-// export async function getSocialMedia() {
+// export default async function getSocialMedia() {
 //   try {
 //     const data = await GET();
-//     return data;
+//     console.log(data);
+
+//     return data.result;
 //   } catch {
 //     console.log("Error");
 //   }

@@ -4,15 +4,20 @@ import Container from "../Containers/Container";
 import Grid from "../Containers/Grid";
 import Section from "../Containers/Section";
 import SectionHeading from "@/Components/Heading/SeactionHeading";
-import styles from "./skill.module.css";
+interface skillsProps {
+  skillsData: any;
+}
 
-export default function Skills() {
+export default function Skills({ skillsData }: skillsProps) {
+  console.log(skillsData);
+
   function Spacer() {
     return <div style={{ height: "20px" }} />;
   }
 
   function Heading(props: { title: string }) {
     const { title } = props;
+
     return (
       <h3>
         <strong>
@@ -38,7 +43,7 @@ export default function Skills() {
         <Spacer />
 
         <Grid minmax={300} gap={30}>
-          {ProgrammingLanguages.map((value, index) => (
+          {skillsData.language.map((value: any, index: any) => (
             <RangeCard {...value} key={index} />
           ))}
         </Grid>
@@ -47,7 +52,7 @@ export default function Skills() {
         <Heading title="FrameWorks" />
         <Spacer />
         <Grid minmax={300} gap={30}>
-          {FrameWorks.map((value, index) => (
+          {skillsData.framework.map((value: any, index: number) => (
             <RangeCard {...value} key={index} />
           ))}
         </Grid>
@@ -56,7 +61,7 @@ export default function Skills() {
         <Heading title="Data Base" />
         <Spacer />
         <Grid minmax={300} gap={30}>
-          {DataBases.map((value, index) => (
+          {skillsData.database.map((value: any, index: number) => (
             <RangeCard {...value} key={index} />
           ))}
         </Grid>

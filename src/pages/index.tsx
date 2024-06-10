@@ -1,4 +1,3 @@
-import SeactionHeading from "@/Components/Heading/SeactionHeading";
 import Layout from "@/Components/Layout/Layout";
 import Section from "@/Components/Containers/Section";
 import TypeWritter from "@/Components/Typewritter/TypeWritter";
@@ -8,6 +7,7 @@ import About from "@/Components/Sections/About";
 import Skills from "@/Components/Sections/Skill";
 import Resume from "@/Components/Sections/Resume";
 import { useEffect, useState } from "react";
+import { getSocialMedia, getSkills } from "@/Actions/Controller";
 
 const designation = [
   "Data Scientist",
@@ -17,20 +17,28 @@ const designation = [
   "Freelancer",
 ];
 export default function Index() {
-  const [data, setData] = useState([]);
+  const [media, setMedia] = useState([]);
+  const [skills, setSkills] = useState({
+    language: [],
+    framework: [],
+    database: [],
+  });
   useEffect(() => {
-    async function getData() {
-      const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}routes`).then(
-        (e) => {
-          return e.json();
-        }
-      );
-      setData(data.data);
-    }
-    getData();
+    const getMedia = async () => {
+      const response: any = await getSocialMedia();
+      setMedia(response.data.data);
+    };
+
+    const getSkillsData = async () => {
+      const response: any = await getSkills();
+      setSkills(response.data.data[0]);
+      console.log(response.data.data[0]);
+    };
+    getMedia();
+    getSkillsData();
   }, []);
   return (
-    <Layout title="Prashant Yelurkar" socialMedia={data}>
+    <Layout title="Prashant Yelurkar" socialMedia={media}>
       <div className={styles.main}>
         <div className={styles.home} id={"home"}>
           <Section>
@@ -44,7 +52,7 @@ export default function Index() {
           <About />
         </div>
         <div id="skill">
-          <Skills />
+          <Skills skillsData={skills} />
         </div>
         <div id="resume">
           <Resume />

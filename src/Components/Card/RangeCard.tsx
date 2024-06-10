@@ -1,16 +1,13 @@
 import Flex from "../Containers/Flex";
 import styles from "./range.module.css";
-export default function RangeCard(props: {
-  amount: string | number | readonly string[] | undefined;
-  name: string;
-}) {
-  const { amount, name } = props;
+export default function RangeCard(props: { rating: string; name: string }) {
+  const { rating, name } = props;
   const gradientStyle = {
     background: `linear-gradient(
       to right,
       #149ddd 0%,
-      #149ddd ${amount}%,
-      #dce8f8 ${amount}%,
+      #149ddd ${rating}%,
+      #dce8f8 ${rating}%,
       #dce8f8 100%
     )`,
   };
@@ -18,13 +15,13 @@ export default function RangeCard(props: {
     <div className={styles.range}>
       <div className={styles.flex}>
         <span className={styles.title}>{name}</span>
-        <span>{amount}%</span>
+        <span>{rating}%</span>
       </div>
 
       <input
         style={gradientStyle}
         type="range"
-        value={amount}
+        value={rating}
         min={0}
         max={100}
         onChange={() => {}}

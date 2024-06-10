@@ -1,4 +1,3 @@
-import { DataBases, FrameWorks, ProgrammingLanguages } from "@/Utils/data";
 import RangeCard from "../Card/RangeCard";
 import Container from "../Containers/Container";
 import Grid from "../Containers/Grid";

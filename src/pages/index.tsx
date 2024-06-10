@@ -7,7 +7,7 @@ import Container from "@/Components/Containers/Container";
 import About from "@/Components/Sections/About";
 import Skills from "@/Components/Sections/Skill";
 import Resume from "@/Components/Sections/Resume";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const designation = [
   "Data Scientist",
@@ -17,6 +17,7 @@ const designation = [
   "Freelancer",
 ];
 export default function Index() {
+  const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
       const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}routes`).then(
@@ -24,12 +25,12 @@ export default function Index() {
           return e.json();
         }
       );
-      console.log(data[0]);
+      setData(data.data);
     }
     getData();
-  });
+  }, []);
   return (
-    <Layout title="Prashant Yelurkar">
+    <Layout title="Prashant Yelurkar" socialMedia={data}>
       <div className={styles.main}>
         <div className={styles.home} id={"home"}>
           <Section>
@@ -39,7 +40,6 @@ export default function Index() {
             </Container>
           </Section>
         </div>
-
         <div id="about">
           <About />
         </div>

@@ -6,9 +6,10 @@ import MobileNav from "../NavBar/MobileNav";
 interface LayoutProps {
   children: ReactNode;
   title: string;
+  socialMedia: any;
 }
 
-export default function Layout({ children, title }: LayoutProps) {
+export default function Layout({ children, title, socialMedia }: LayoutProps) {
   const [mobNav, setMobNav] = useState(false);
 
   return (
@@ -18,7 +19,11 @@ export default function Layout({ children, title }: LayoutProps) {
       </Head>
       <div className={styles.layout}>
         <div className={styles.sideBar}>
-          <SideBar mobView={mobNav} fn={() => setMobNav(!mobNav)} />
+          <SideBar
+            mobView={mobNav}
+            fn={() => setMobNav(!mobNav)}
+            socialMedia={socialMedia}
+          />
           <MobileNav fn={() => setMobNav(!mobNav)} mobView={mobNav} />
         </div>
         {children}

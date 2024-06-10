@@ -12,28 +12,23 @@ import {
 
 export const mediaData = [
   {
-    name: "twitter",
-    link: "dfsf",
+    name: "Twitter",
     icon: <Twitter />,
   },
   {
     name: "Instagram",
-    link: "fb-link",
     icon: <Instagram />,
   },
   {
     name: "Facebook",
-    link: "dfsf",
     icon: <Facebook />,
   },
   {
     name: "Linkdin",
-    link: "fb-link",
     icon: <Linkdin />,
   },
   {
     name: "Github",
-    link: "fb-link",
     icon: <GitHub />,
   },
 ];

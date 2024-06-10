@@ -7,8 +7,9 @@ import { useEffect, useState } from "react";
 interface SideBarProps {
   mobView: any;
   fn: Function;
+  socialMedia: any;
 }
-export default function SideBar({ fn, mobView }: SideBarProps) {
+export default function SideBar({ fn, mobView, socialMedia }: SideBarProps) {
   const [scrollTo, setScrollTo] = useState("home");
   const [selectedNav, setSelectedNav] = useState("home");
 
@@ -24,7 +25,7 @@ export default function SideBar({ fn, mobView }: SideBarProps) {
 
   return (
     <aside className={`${styles.sideBar} ${mobView ? styles.mobNav : ""}`}>
-      <Profile />
+      <Profile socialMedia={socialMedia} />
 
       <nav className={styles.navigation}>
         <div>
